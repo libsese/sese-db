@@ -1,0 +1,26 @@
+{
+    "cmake.configureArgs": [
+        "-DCMAKE_TOOLCHAIN_FILE=/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "-DVCPKG_TARGET_TRIPLET:STRING=x64-linux-dynamic",
+        "-DSESE_DB_BUILD_TEST:BOOL=ON",
+        "-DSESE_DB_USE_MARIADB:BOOL=ON",
+        "-DSESE_DB_USE_POSTGRES:BOOL=ON",
+        "-DSESE_DB_USE_SQLITE:BOOL=ON"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 18806,
+            "driver": "MySQL",
+            "database": "db_test",
+            "username": "root",
+            "password": "libsese",
+            "name": "db_test"
+        }
+    ]
+}
